@@ -2,7 +2,7 @@
 # Package stage
 #
 FROM eclipse-temurin:17-jre-jammy
-ARG JAR_FILE=/usr/app/target/*.jar
+ARG JAR_FILE=/home/priyankaakhade2023/cloud_run_job_repo/target/*.jar
 COPY --from=build $JAR_FILE /app/runner.jar
 #EXPOSE 8080
 ENTRYPOINT java -jar /app/runner.jar
