@@ -14,7 +14,7 @@ import java.nio.file.Paths;
 public class CloudRunJobPocApplication implements CommandLineRunner {
 
     String fileName = "samplefile.json";
-    String bucketName = "test-bucket-search-conversation";
+    String bucketName = "test-bucket-search-conversation-new";
 
     public static void main(String[] args) {
         SpringApplication.run(CloudRunJobPocApplication.class, args);
