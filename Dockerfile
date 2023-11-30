@@ -8,11 +8,11 @@
 # ENTRYPOINT java -jar /app/runner.jar
 
 FROM eclipse-temurin:17-jdk-alpine
-# WORKDIR /usr/src/app
-# COPY samplefile.json /usr/src/app/samplefile.json
+WORKDIR /usr/src/app
+COPY samplefile.json /usr/src/app/samplefile.json
 # WORKDIR /tmp
 # VOLUME /tmp
 # ARG CloudRunJobPOC-0.0.1-SNAPSHOT.jar
 # COPY samplefile.json $samplefile.json
-COPY CloudRunJobPOC-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java","-jar","app.jar"]
+COPY CloudRunJobPOC-0.0.1-SNAPSHOT.jar /usr/src/app/CloudRunJobPOC.jar
+ENTRYPOINT ["java","-jar","/usr/src/app/CloudRunJobPOC.jar"]
